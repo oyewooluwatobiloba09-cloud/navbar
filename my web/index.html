@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyBrand Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            background: #9da3a0;
+        }
+
+        /* Navigation Header */
+        .navbar {
+            width: 100%;
+            background: rgb(73, 206, 55);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .nav-header {
+            height: 105px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 54px;
+        }
+
+        .logo {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Hamburger Button */
+        .menu-toggle {
+            font-size: 32px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            color: #222;
+        }
+
+        /* Navigation Links */
+        .nav-links {
+            display: none;
+            list-style: none;
+            padding: 20px 54px 25px;
+        }
+
+        .nav-links.active {
+            display: block;
+        }
+
+        .nav-links li {
+            margin-bottom: 32px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            color: #000;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 600px) {
+            .nav-header {
+                padding: 0 25px;
+            }
+
+            .nav-links {
+                padding-left: 25px;
+            }
+
+            .logo {
+                font-size: 30px;
+            }
+
+            .nav-links a {
+                font-size: 24px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="nav-header">
+
+            <div class="logo"><img src="logo.png" alt="MyBrand "></div>
+
+            <button class="menu-toggle" onclick="toggleMenu()">
+                ☰
+            </button>
+
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+
+            <li><a href="#home">Home</a></li>
+
+            <li><a href="#about">About</a></li>
+
+            <li><a href="#services">Services</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+    <script>
+
+        function toggleMenu() {
+
+            const menu = document.getElementById("navLinks");
+
+            menu.classList.toggle("active");
+
+        }
+
+    </script>
+
+</body>
+</html>
